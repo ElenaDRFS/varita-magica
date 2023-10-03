@@ -44,9 +44,11 @@ for(i = 0; i < varios.length; i++){
     
 }
 
-// cursor por encima imágenes (con el toggle seguro vuelve al original. consultar en clase)
+// cursor por encima imágenes 
 
 const magia = document.querySelectorAll('img');
+let originales = magia[i].src;
+
 
 for(let i = 0; i < magia.length; i++){
     magia[i].addEventListener('mouseover', function(){
@@ -57,7 +59,7 @@ for(let i = 0; i < magia.length; i++){
 
 for(let i = 0; i < magia.length; i++){
     magia[i].addEventListener('mouseout', function(){
-            magia[i].src = '../assets/magic-2.gif' ;
+            magia[i].src =  originales;
 
     })
 }
